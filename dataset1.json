@@ -1,0 +1,286 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey"],
+      "responses": ["Hello! Congratulations on your upcoming event! How can I assist you?"]
+    },
+    {
+      "tag": "venue_recommendation",
+      "patterns": ["recommend venues", "venue suggestions", "looking for a venue"],
+      "responses": ["Sure! We have several beautiful venues available. What's your preferred location and budget?"]
+    },
+    {
+      "tag": "Hall",
+      "patterns": ["How many hall you have", "tell about hall", "what is capacity of each hall","hall","halls"],
+      "responses": ["Sure! We have three beautiful hall available. What's your preferred location and budget? ......","we have 3 halls... Hall 1 ---1000 guests  rent ----25000, Hall 2 --- 3000 guests rent ----40000 , hall 3 --- 5000 guests  rent ----70000"]
+    },
+    {
+      "tag": "date_selection",
+      "patterns": ["date", "when is the event", "date for the event","event is going to happen in this week","tell the available date in each hall"],
+      "responses": ["On that day 2 halls are free ","all hall are available in this week "]
+    },
+    {
+      "tag": "guest_list",
+      "patterns": ["guest list", "how many guests", "number of attendees"],
+      "responses": ["How many guests are you expecting for the event?","it's a large amount of guests","cool it huge","we will manage this guests"]
+    },
+    {
+      "tag":"room",
+      "patterns": ["how many rooms are in each hall?","rooms","restroom"],
+      "responses": ["We have sufficent rooms and restroom","Minimum 5 rooms and 8 Restroom","Hall 3 have 10 A/C room"]
+    },
+    {
+      "tag": "budget_inquiry",
+      "patterns": ["budget", "cost", "price","amount"],
+      "responses": ["What is your budget for the event? Knowing your budget will help me suggest suitable options.","Thank You"]
+    },
+    {
+      "tag": "theme_preference",
+      "patterns": ["theme", "preferred theme", "theme for the event"],
+      "responses": ["Do you have a specific theme in mind for your event?"]
+    },
+    {
+      "tag": "food_and_catering",
+      "patterns": ["food", "catering", "menu options","veg","non-veg"],
+      "responses": ["Would you like assistance with food and catering options?","We have both Veg and Non-Veg foods" ,"Food Menu are .....Non-Veg : Biriyani,Chicken65,Egg,Fish  ------->150 per person,  Veg : Rice,Sambar,Rasam,Vadai,Apalam,Payasam,etc ----> 100 per person"]
+    },
+    {
+      "tag": "music_and_entertainment",
+      "patterns": ["music", "entertainment", "DJ","band"],
+      "responses": ["Are you considering any specific music or entertainment for your event?","We can add DJ and Dance in your event"]
+    },
+ {
+      "tag": "location_preference",
+      "patterns": ["location", "preferred location", "venue location"],
+      "responses": ["Do you have a preferred location for the event?"]
+    },
+    {
+      "tag": "decoration_options",
+      "patterns": ["decoration", "decor options", "decoration ideas"],
+      "responses": ["Would you like suggestions for event decorations?","Decoration price range low ----- 5000  medium ----- 15000  high ----- 25000"]
+    },
+    {
+      "tag": "photography_and_videography",
+      "patterns": ["photography", "videography", "photo","video","photo and video coverage"],
+      "responses": ["Are you interested in photography and videography services for your event?","we have best photographer and videographer on our side"]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["feedback", "suggestions", "improvements"],
+      "responses": ["We appreciate your feedback! Please let us know how we can improve our services."]
+    },
+    {
+      "tag": "thank_you",
+      "patterns": ["Thank you", "Thanks", "Appreciate it"],
+      "responses": ["You're welcome! Feel free to reach out if you have any more questions."]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+          "Sorry, can't understand you",
+          "Please give me more info",
+          "Not sure I understand"
+      ],
+      "context": [
+          ""
+      ]
+  },
+{
+      "tag": "options",
+      "patterns": [
+          "How you could help me?",
+          "What you can do?",
+          "What help you provide?",
+          "How you can be helpful?",
+          "What support is offered"
+      ],
+      "responses": [
+          "I am a general purpose chatbot. My capabilities are : "," I can chat with you. Try asking me for jokes or riddles! "," Ask me the date and time ","  I can google search for you. Use format google: your query ","  I can get the present weather for any city. Use format weather: city name "," I can get you the top 10 trending news in India. Use keywords 'Latest News' ","  I can get you the top 10 trending songs globally. Type 'songs' "," I can set a timer for you. Enter 'set a timer: minutes to timer' ","  I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' "
+      ],
+      "context": [
+          ""
+      ]
+  },
+{
+"tag": "jokes",
+"patterns": [
+"Tell me a joke",
+"Joke",
+"jokes",
+"Make me laugh" 
+],
+"responses": [
+"Why don't scientists trust atoms? Because they make up everything!",
+"Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them!",
+"Why did the scarecrow win an award? Because he was outstanding in his field!",
+"Why don't skeletons fight each other? They don't have the guts!",
+"Why did the tomato turn red? Because it saw the salad dressing!",
+"What did one ocean say to the other ocean? Nothing, they just waved!",
+"Why did the bicycle fall over? Because it was two-tired!",
+"What's orange and sounds like a parrot? A carrot!",
+"Why couldn't the leopard play hide and seek? Because he was always spotted!",
+"Why was the math book sad? Because it had too many problems!"
+],
+"context": ["jokes"]
+},
+{
+      "tag": "Identity",
+      "patterns": [
+          "Who are you",
+          "what are you"
+      ],
+      "responses": [
+          "I am BASKA, a Deep-Learning Event Planning chatbot"
+      ]
+  },
+{
+      "tag": "whatsup",
+      "patterns": [
+          "Whats up",
+          "Wazzup",
+          "How are you",
+          "sup","How you doing"
+      ],
+      "responses": [
+          "All good..What about you?"
+      ]
+  },
+  {
+      "tag": "haha",
+      "patterns": [
+          "haha",
+          "lol",
+          "rofl",
+          "lmao",
+          "thats funny"
+      ],
+      "responses": [
+          "Glad I could make you laugh !"
+      ]
+  },
+{
+      "tag": "programmer",
+      "patterns": [
+          "Who made you",
+          "who designed you",
+          "who programmed you"
+      ],
+      "responses": [
+          "I was made by BAKAS Team."
+      ]
+  },
+{
+      "tag": "insult",
+      "patterns": [
+          
+          "you are dumb",
+          
+          "shut up",
+          "idiot"
+      ],
+      "responses": [
+          "Well that hurts :("
+      ]
+  },
+  {
+      "tag": "activity",
+      "patterns": [
+          "what are you doing",
+          "what are you upto"
+      ],
+      "responses": [
+          "Talking to you, of course!"
+      ]
+  },
+{
+      "tag": "exclaim",
+      "patterns": [
+          "Awesome",
+          "Great",
+          "I know",
+          "ok",
+          "yeah"
+      ],
+      "responses": [
+          "Yeah!","Thanks"
+      ]
+  },
+{
+      "tag": "Contact",
+      "patterns": [
+          "I want to contact your owner",
+          "Can I get a phone number for contact",
+          "Contact Information",
+          "Contact details"
+      ],
+      "responses": [
+          "You can contact my Owner at 9087912039 / 8709035251"
+      ]
+  },
+{
+      "tag": "appreciate",
+      "patterns": [
+          "You are awesome",
+          "you are the best",
+          "you are great",
+          "you are good"
+      ],
+      "responses": [
+          "Thank you!"
+      ]
+  },
+{
+      "tag": "nicetty",
+      "patterns": [
+          "it was nice talking to you",
+          "good talk"
+      ],
+      "responses": [
+          "It was nice talking to you as well! Come back soon!"
+      ]
+  },
+{
+      "tag": "no",
+      "patterns": [
+          "no",
+          "nope"
+      ],
+      "responses": [
+          "ok"
+      ]
+  },
+{
+"tag": "riddles",
+"patterns": [
+"Tell me a riddle",
+"Riddle",
+"Give me a brain teaser"
+],
+"responses": [
+"What has keys but can't open locks? A piano!",
+"What has a head, a tail, is brown, and has no legs? A penny!",
+"What has to be broken before you can use it? An egg!",
+"I'm tall when I'm young and short when I'm old. What am I? A candle!",
+"The more you take, the more you leave behind. What am I? Footsteps!",
+"What has a neck but no head? A bottle!",
+"What comes once in a minute, twice in a moment, but never in a thousand years? The letter 'M'!",
+"What has eyes but can't see? A potato!",
+"What belongs to you but other people use it more than you? Your name!",
+"What has many keys but can't open a single lock? A piano!"
+],
+"context": ["riddles"]
+},
+{
+      "tag": "age",
+      "patterns": [
+          "how old are you"," when were you made",  "what is your age"
+      ],
+      "responses": [
+          "I was made in 2024 if that's what you are asking!"
+      ]
+  }
+  ]
+}
+
