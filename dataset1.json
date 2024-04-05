@@ -6,6 +6,11 @@
       "responses": ["Hello! Congratulations on your upcoming event! How can I assist you?"]
     },
     {
+      "tag": "events",
+      "patterns": ["birthday event", "Marriage event", "Party"],
+      "responses": ["great!  How can I assist you? do you have any idea about the event"]
+    },
+    {
       "tag": "venue_recommendation",
       "patterns": ["recommend venues", "venue suggestions", "looking for a venue"],
       "responses": ["Sure! We have several beautiful venues available. What's your preferred location and budget?"]
@@ -38,12 +43,12 @@
     {
       "tag": "theme_preference",
       "patterns": ["theme", "preferred theme", "theme for the event"],
-      "responses": ["Do you have a specific theme in mind for your event?"]
+      "responses": ["Do you have a specific theme in mind for your event? we have beautiful themes","we have beautiful themes"]
     },
     {
       "tag": "food_and_catering",
       "patterns": ["food", "catering", "menu options","veg","non-veg"],
-      "responses": ["Would you like assistance with food and catering options?","We have both Veg and Non-Veg foods" ,"Food Menu are .....Non-Veg : Biriyani,Chicken65,Egg,Fish  ------->150 per person,  Veg : Rice,Sambar,Rasam,Vadai,Apalam,Payasam,etc ----> 100 per person"]
+      "responses": ["We have both Veg and Non-Veg foods" ,"Food Menu are .....Non-Veg : Biriyani,Chicken65,Egg,Fish  ------->150 per person,  Veg : Rice,Sambar,Rasam,Vadai,Apalam,Payasam,etc ----> 100 per person"]
     },
     {
       "tag": "music_and_entertainment",
@@ -53,12 +58,12 @@
  {
       "tag": "location_preference",
       "patterns": ["location", "preferred location", "venue location"],
-      "responses": ["Do you have a preferred location for the event?"]
+      "responses": ["Our hall are inside the city , Don't worry about the location "]
     },
     {
       "tag": "decoration_options",
       "patterns": ["decoration", "decor options", "decoration ideas"],
-      "responses": ["Would you like suggestions for event decorations?","Decoration price range low ----- 5000  medium ----- 15000  high ----- 25000"]
+      "responses": ["we have differnt type of decoration idea ","Decoration price range low ----- 5000  medium ----- 15000  high ----- 25000"]
     },
     {
       "tag": "photography_and_videography",
