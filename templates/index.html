@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <lik rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}">
+        <link rel="stylesheet" href="/static/style (1).css">
+</head>
+<body>
+    <div class="containers">
+        <div class="c1">
+            <nav>
+                <a href="#" class="1">Home</a>
+                <a href="#" class="2">Gallery</a>
+                <a href="#">Plan Your Event</a>
+                <a href="#" >Serives</a>
+                <a href="#">Contact</a>
+            </nav>
+            <h1>Make your day<br> memorable <br>with us </h1>
+        </div>
+        <div class="c2">
+            <h1>Events</h1>
+            <div class="event">
+                <div class="e1"></div>
+                <div class="e2"></div>
+                <div class="e3"></div>
+            </div>
+        </div>
+        <div class="c3">
+            <h1>Halls</h1>
+            <div class="hall">
+                <div class="h1"></div>
+                <div class="h2"></div>
+                <div class="h3"></div>
+            </div>
+        </div>
+        <div class="c4">
+            <h1>Food</h1>
+            <div class="food">
+                <div class="V"></div>
+                <div class="NV"></div>
+            </div>
+        </div>
+        <div class="c5">
+            <h1>Decoration</h1>
+            <div class="dec">
+                <div class="d1"><img src="/static/d1.png"></div>
+                <div class="d2"><img src="/static/d2.jpeg"></div>
+                <div class="d3"><img src="/static/d3.avif"></div><br>
+                <div class="d4"><img src="/static/d4.jpg"></div>
+                <div class="d5"><img src="/static/d5.jpg"></div>
+                <div class="d6"><img src="/static/d6.jpg"></div>
+            </div>
+        </div>
+        <div class="c6">
+            <h1>Reviews</h1>
+            <div class="review">
+                <div class="r1"><h2>Barath</h2><h4>Very nice plannig  for event</h4>
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-50 (1).png" style="height: 44px;width: 44px;"></div>
+                <div class="r2">
+                    <h2>Aravinda</h2><h4>Very nice plannig  for event</h4>
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-50 (1).png"
+                style="height: 44px;width: 44px;">
+                </div>
+                <div class="r3">
+                    <h2>Emma Watson</h2><h4>Very nice plannig  for event</h4>
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-48.png">
+                <img src="/static/icons8-star-50 (1).png"
+                style="height: 44px;width: 44px;">
+                </div>
+            </div>
+        </div>
+        <div class="c7">
+            <h1>Location</h1>
+            <div class="loc"><img src="/static/location.jpg"></div>
+        </div>
+        <div class="c8">
+            <div class="contact">
+                <h3>Contact : 9080120324</h3><br>
+               <h3>Message : 8089712030 </h3><br>
+                <h3>gmail : myplanday@gmail.com</h3><br>
+                <h3>instagram</h3><br>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cricle" onclick="show()"></div>
+            <div class="chatbot">
+                
+                <div class="message-body">
+                    <div class="user"><span class="user-body"><h2>hi</h2></span></div>
+                    <div class="bot"><span class="bot-body"><h2>hello</h2></span></div>
+                </div>
+                <div class="sent-body">
+                    <input type="text" id="input-text">
+                    <button type="submit" onclick="sent()"></button>
+                </div>
+            
+        </div>
+    </div>
+    <script>
+        let message = document.querySelector(".message-body");
+        let input = document.querySelector("#input-text");
+        let chatbot = document.querySelector(".chatbot");
+        let circle = document.querySelector(".cricle");
+
+        function sent(){
+            const userInput = input.value;
+            if (userInput.trim() === "") {
+                return;
+            }
+            message.innerHTML += `<div class="user"><span class="user-body"><h2>${input.value}</h2></span></div>`;
+            fetch('/process_question', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display bot's response in the chat
+                message.innerHTML += `<div class="bot"><span class="bot-body"><h2>${data.result}</h2></span></div>`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            // Clear input field
+            input.value = "";
+        }
+
+        function show() {
+            chatbot.style.display = "flex";
+            circle.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
