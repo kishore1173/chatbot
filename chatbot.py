@@ -61,7 +61,7 @@ y_train = np.array([output_row for _, output_row in training])
 print("Training data shape:", X_train.shape)
 print("Label data shape:", y_train.shape)
 
-
+"""
 model = Sequential()
 model.add(Dense(128, activation='relu', input_shape=(len(X_train[0]),)))
 model.add(Dropout(0.5))
@@ -80,7 +80,7 @@ model.add(LSTM(110))
 model.add(Dense(208, activation = 'relu'))
 model.add(Dense(len(y_train[0]), activation='softmax'))
 # accuracy = 98%
-"""
+
 
 # Compile model
 adam = keras.optimizers.Adam(0.001)
@@ -98,7 +98,6 @@ print("Training completed!")
 
 
 
-"""
 while True:
     input_text = input("You: ")
     if input_text.lower() == 'quit':
@@ -129,7 +128,7 @@ while True:
         response = get_response(predicted_tag)   
         print("Bot:",response)
        
-"""
+
 def get_output(input_text):
     if input_text.lower() == 'quit':
         return
