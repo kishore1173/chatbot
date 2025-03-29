@@ -22,13 +22,20 @@ The **Event Planning Chatbot** is an AI-powered assistant designed to help users
 ### Prerequisites
 Ensure you have **Python (>=3.6)** and **pip** installed.
 To run this program you need some important modules
--**numpy ====> 1.22.7**
+-**numpy ====> 1.22.7** 
+
 -**keras ====> 2.10.0**
+
 -**nltk ====> 3.8.1**
+
 -**json  ====> 2.10.1**
+
 -**tensorflow ====> 2.12.3**
+
 -**pickle ====> 1.2.3**
+
 -**flask  ====> 2.3.2**
+
 
 
 
