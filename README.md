@@ -20,6 +20,11 @@ It combines a beautiful **frontend** (HTML, CSS, JavaScript) with a **Flask back
 - **Responsive Chatbot UI** – Floating chat window inside the site.
 - **Frontend + Backend** – Clean separation with API-based communication.
 
+<img width="935" height="410" alt="image" src="https://github.com/user-attachments/assets/8160f4d0-ce6b-4268-b49f-b9392a8bc80b" />
+
+<img width="876" height="409" alt="image" src="https://github.com/user-attachments/assets/d40673aa-066b-4700-9b93-d91fea908b74" />
+<img width="883" height="418" alt="image" src="https://github.com/user-attachments/assets/a5756433-9df2-4049-86ec-3f522903fc8a" />
+
 ---
 
 ##  Technologies Used
